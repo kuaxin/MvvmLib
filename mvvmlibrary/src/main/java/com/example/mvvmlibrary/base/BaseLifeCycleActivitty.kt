@@ -8,7 +8,6 @@ import com.hjq.toast.ToastUtils
 import com.kingja.loadsir.callback.SuccessCallback
 import com.wjx.android.wanandroidmvvm.common.state.State
 import com.youjiaoyule.mvvmactual.common.StateType
-import com.youjiaoyule.mvvmactual.common.callback.EmptyCallBack
 
 /**
  *  @author RenGX on 2020/6/10
@@ -34,11 +33,11 @@ abstract class BaseLifeCycleActivitty<VM : BaseViewModel<*>>: BaseActivity() {
 
 
     open fun showLoading() {
-        loadService.showCallback(LoadingCallBack::class.java)
+//        loadService.showCallback(LoadingCallBack::class.java)
     }
 
     open fun showSuccess() {
-        loadService.showCallback(SuccessCallback::class.java)
+//        loadService.showCallback(SuccessCallback::class.java)
     }
 
     open fun showError(msg: String) {
@@ -46,7 +45,7 @@ abstract class BaseLifeCycleActivitty<VM : BaseViewModel<*>>: BaseActivity() {
             Log.e("TEST",msg)
             ToastUtils.show(msg)
         }
-        loadService.showCallback(ErrorCallBack::class.java)
+//        loadService.showCallback(ErrorCallBack::class.java)
     }
 
 
@@ -65,7 +64,7 @@ abstract class BaseLifeCycleActivitty<VM : BaseViewModel<*>>: BaseActivity() {
 //    }
 
     open fun showEmpty() {
-        loadService.showCallback(EmptyCallBack::class.java)
+//        loadService.showCallback(EmptyCallBack::class.java)
     }
 
     /**

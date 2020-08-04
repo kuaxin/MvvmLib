@@ -5,7 +5,6 @@ import com.example.mvvmlibrary.common.CommonUtil
 import com.hjq.toast.ToastUtils
 import com.wjx.android.wanandroidmvvm.common.state.State
 import com.youjiaoyule.mvvmactual.common.StateType
-import com.youjiaoyule.mvvmactual.common.callback.EmptyCallBack
 
 /**
  *  @author RenGX on 2020/6/11
@@ -27,7 +26,7 @@ abstract class BaseLifeCycleFragment<VM: BaseViewModel<*>>: BaseFragment() {
     abstract fun initDataObserver()
 
     private fun showLoading() {
-        loadService.showCallback(LoadingCallBack::class.java)
+//        loadService.showCallback(LoadingCallBack::class.java)
     }
 
     private fun showSuccess(){
@@ -38,11 +37,11 @@ abstract class BaseLifeCycleFragment<VM: BaseViewModel<*>>: BaseFragment() {
         if(errorMsg.isNotEmpty()){
             ToastUtils.show(errorMsg)
         }
-        loadService.showCallback(ErrorCallBack::class.java)
+//        loadService.showCallback(ErrorCallBack::class.java)
     }
 
     private fun showEmpty(){
-        loadService.showCallback(EmptyCallBack::class.java)
+//        loadService.showCallback(EmptyCallBack::class.java)
     }
 
     //消息的统一处理
