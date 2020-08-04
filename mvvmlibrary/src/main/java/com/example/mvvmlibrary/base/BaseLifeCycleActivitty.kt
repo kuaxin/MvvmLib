@@ -5,7 +5,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.mvvmlibrary.common.CommonUtil
 import com.hjq.toast.ToastUtils
-import com.kingja.loadsir.callback.SuccessCallback
 import com.wjx.android.wanandroidmvvm.common.state.State
 import com.youjiaoyule.mvvmactual.common.StateType
 
